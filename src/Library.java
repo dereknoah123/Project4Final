@@ -1,24 +1,20 @@
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Library {
-    private List<Book> books;
+    private List<Checkout> books;
 
     public Library() {
-        this.books = new ArrayList<>();
+        this.books = new LinkedList<>();
     }
 
-    public void addBook(Book book) {
+    public void addBook(Checkout book) {
         books.add(book);
-    }
-
-    public void removeBook(Book book) {
-        books.remove(book);
     }
 
     public void displayBooks() {
         System.out.println("Books in the library:");
-        for (Book book : books) {
+        for (Checkout book : books) {
             System.out.println(book.getTitle() + " by " + book.getAuthor());
         }
     }
